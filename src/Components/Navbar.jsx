@@ -47,7 +47,7 @@ export default function Navbar() {
                                 <img src={logo} alt="logo" />
                             </li>
                         </ul>
-                        <ul className='flex gap-5 font-light text-2xl'>
+                        <ul className='flex gap-5 font-light text-xl'>
                             {Items.map((item, index) => (
                                 <li
                                     key={index}
