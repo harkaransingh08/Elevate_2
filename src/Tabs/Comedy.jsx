@@ -10,13 +10,13 @@ export default function SwiperImages() {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-GsZ9QVL9kC1EBOUzUBJ58pkoHm3YeUjGQ&s',
     'https://upload.wikimedia.org/wikipedia/en/thumb/9/93/21JumpStreetfilm.jpg/250px-21JumpStreetfilm.jpg',
     'https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Deadpool_%282016_poster%29.png/250px-Deadpool_%282016_poster%29.png',
-    // 'https://www.imdb.com/title/tt0829482/',
-    // 'https://en.wikipedia.org/wiki/Step_Brothers_%28film%29',
-    'https://www.imdb.com/title/tt7975244/',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgNo79yQhudtUdAz6zguIfgAecVuOpPZBeA&s/',
+    'https://upload.wikimedia.org/wikipedia/en/d/d9/StepbrothersMP08.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXAQMy849zSmXknrzCRJrMhh_oIRbhqR_2Q&s/',
     'https://m.media-amazon.com/images/M/MV5BNDZmMGEwMjQtNjFlNi00ZGIxLTlkZjItNmU3Mzg4Y2E0ZjUzXkEyXkFqcGc@._V1_.jpg',
-    // 'https://m.media-amazon.com/images/M/MV5BMTNkZTExMWYtMGZjMy00NGUwLWJmMWEtOThjYmZjY2Q0N2M5XkEyXkFqcGc@._V1_.jpg',
+    'https://m.media-amazon.com/images/M/MV5BMTNkZTExMWYtMGZjMy00NGUwLWJmMWEtOThjYmZjY2Q0N2M5XkEyXkFqcGc@._V1_.jpg',
     'https://upload.wikimedia.org/wikipedia/en/6/6f/Bhool_bhulaiyaa.jpg',
-    'https://en.wikipedia.org/wiki/Welcome_%282007_film%29',
+    'https://upload.wikimedia.org/wikipedia/en/f/f4/Welcome_poster_2007.jpg',
     'https://m.media-amazon.com/images/M/MV5BZWU3OTEzODgtMWY4OS00N2NkLWJlNGQtMWZhZDJmODQwN2E5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     'https://m.media-amazon.com/images/M/MV5BNzc4ZWQ3NmYtODE0Ny00YTQ4LTlkZWItNTBkMGQ0MmUwMmJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ__z7FWhIPtkl1CzOjuU_Sga8djKtVdLSGbg&s',
@@ -24,15 +24,20 @@ export default function SwiperImages() {
     'https://m.media-amazon.com/images/M/MV5BM2JjMWM0MDAtMDk2Zi00MWVmLTkxNDQtZDllNWE2YjYwZGM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvMOejcFtlPDjVanskXZqPkHX0NDF7aQ79gQ&s',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyzE0JIr4lsa4J54jHOZxhAkmJdAPR8iOiA&s',
-    'https://www.primevideo.com/detail/Jatt-And-Julliet-2/0KJA69SHBMGI3A3UV9M5SUGSW4',
-    'https://www.imdb.com/hi/title/tt10623524/',
-    'https://en.wikipedia.org/wiki/Mr_%26_Mrs_420',
-    'https://www.imdb.com/title/tt6047120/',
+    'https://m.media-amazon.com/images/S/pv-target-images/93526a0419d048a37c86981472d425bd5f577f57bc5507686255b1e154f0840b.jpg',
+    'https://m.media-amazon.com/images/M/MV5BZWE1NmZiOGMtODJkMi00MGFhLWFkOTItZGI1NzVjOWUyNjAzXkEyXkFqcGc@._V1_QL75_UX149_.jpg/',
+    'https://upload.wikimedia.org/wikipedia/en/5/59/Mr_%26_Mrs_420_poster.jpg',
+    'https://m.media-amazon.com/images/M/MV5BMWFlOGU0MDYtODNkZi00ODRkLWJhN2YtNDhhMzA3OWUzOTc1XkEyXkFqcGc@._V1_.jpg/',
   ]
 
   return (
     
     <div className="swiper-container mb-70 select-none">
+      <ul className='flex justify-center text-5xl hover:text-yellow-600 transition-all mt-5 mb-12 duration-200 text-gray-500 hover:scale-110 hover:underline'>
+                <li>
+                    Laugh Lounge
+                </li>
+            </ul>
       <Swiper
         effect="coverflow"
         grabCursor={true}

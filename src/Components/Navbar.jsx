@@ -9,7 +9,7 @@ import logo from '../Images/logo.png';
 export default function Navbar() {
 
     const Items = [
-        { icon: <IoHome className='text-3xl font-extralight underline-none' />, path: '/' },
+        { icon: <IoHome className='text-3xl font-extralight underline-none py-1' />, path: '/' },
         { name: 'New & Hot', path: '/new-and-hot' },
         { name: 'Web Series', path: '/web-series' },
         { name: 'Comedy', path: '/comedy' },
@@ -27,7 +27,15 @@ export default function Navbar() {
         },
 
 
-        { name: 'Bollywood', path: '/bollywood' },
+        {
+            name: 'Bollywood', path: '/bollywood',
+            children: [
+                { name: "History", path: "/hollywood/history" },
+                { name: "Romantic", path: "/hollywood/romantic" },
+                { name: "Comedy", path: "/hollywood/Comedy" },
+                { name: "Thriller", path: "/hollywood/thriller" },
+            ]
+        },
     ];
     const Icons = [
         { icon: <CiSearch className='text-2xl' />, path: '/search' },
@@ -62,10 +70,11 @@ export default function Navbar() {
 
                                     {/* DROPDOWN START */}
                                     {item.children && (
-                                        <ul className="absolute top-full left-0 bg-black/70 backdrop-blur-sm text-gray-200 mt-2 p-3 rounded-md shadow-lg
-          opacity-0 scale-95 pointer-events-none transition-all duration-200
-          group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-        ">
+                                        <ul className="absolute top-full left-0 bg-black/70 backdrop-blur-sm text-gray-200 py-2 p-3 rounded-md shadow-lg
+                                         transition-all hidden group-hover:flex
+                                        duration-200 h-40 w-40  flex-col items-center ">
+
+                                            
                                             {item.children.map((child, cIndex) => (
                                                 <li key={cIndex} className="py-1 hover:text-yellow-400 hover:translate-x-1 transition-all duration-200">
                                                     <a href={child.path}>{child.name}</a>
@@ -90,11 +99,6 @@ export default function Navbar() {
                     </nav>
                 </div>
             </div>
-            <ul className='flex justify-center text-5xl hover:text-yellow-600 transition-all mt-15 duration-200 text-gray-500 hover:scale-110 hover:underline'>
-                <li>
-                    The Top Movies of the Year
-                </li>
-            </ul>
         </div>
     )
 }

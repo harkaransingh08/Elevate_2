@@ -15,7 +15,10 @@ export default function App() {
     <div className=' h-full bg-linear-150 from-gray-700 to-black'>
 
       <BrowserRouter>
+      <div className='flex justify-center w-full items-center '>
         <Navbar />
+      </div>
+        
         <Routes>
           <Route path='/' element={<SwiperImages />} />
           <Route path='/new-and-hot' element={<NewHot />} />
@@ -27,7 +30,9 @@ export default function App() {
         </Routes>
       </BrowserRouter>
 
-      <Footer />
+      <div className='bg-gray-700 text-white flex justify-center w-full text-xl'>
+        <Footer />
+      </div>
     </div>
   );
 }
