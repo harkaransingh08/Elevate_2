@@ -30,7 +30,7 @@ export default function App() {
         </Routes>
       </BrowserRouter>
 
-      <div className='bg-gray-700 text-white flex justify-center w-full text-xl'>
+      <div className='bg-white/15 text-white flex h-fill justify-center rounded-2xl w-full items-center text-xl'>
         <Footer />
       </div>
     </div>
