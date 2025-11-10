@@ -42,7 +42,7 @@ export default function SwiperImages() {
 
   return (
     
-    <div className="swiper-container mb-40 select-none">
+    <div className="swiper-container mb-70 select-none">
       <Swiper
         effect="coverflow"
         grabCursor={true}
@@ -66,7 +66,7 @@ export default function SwiperImages() {
         ))}
       </Swiper>
 
-      <style jsx>{`
+      <style>{`
         .swiper-container {
           width: 100%;
           padding: 50px 0;
