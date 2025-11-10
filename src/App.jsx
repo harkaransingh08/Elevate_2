@@ -25,8 +25,6 @@ export default function App() {
           <Route path='/web-series' element={<Webseries />} />
           <Route path='/comedy' element={<Comedy />} />
           <Route path='/horror' element={<Horror />} />
-          <Route path='/hollywood' element={<Hollywood />} />
-          <Route path='/bollywood' element={<Bollywood />} />
         </Routes>
       </BrowserRouter>
 
