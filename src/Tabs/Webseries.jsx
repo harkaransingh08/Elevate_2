@@ -78,8 +78,6 @@ export default function Webseries() {
         
         /* Side slides styling */
         .swiper-slide:not(.swiper-slide-active) {
-          opacity: 0.6;
-          filter: blur(1px);
         }
         
         .swiper-slide img {

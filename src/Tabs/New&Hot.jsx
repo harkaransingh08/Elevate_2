@@ -16,7 +16,6 @@ export default function NewHot() {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlVPM2ncyLrpfMBkTaHzQ8u8rzpEpBX6zX7A&s',
     'https://m.media-amazon.com/images/M/MV5BYzRkZWE3YTAtNDdkYS00NjE0LWEzMzktMjVkNzVkYjUwODFhXkEyXkFqcGc@._V1_.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tpu4JamMLzcOdkK3USDaIdA9m7e3mJF-Sw&s',
-    
   ]
 
   return (
@@ -57,13 +56,11 @@ export default function NewHot() {
           padding: 50px 0;
         }
         
-        .swiper-slide {
-          width: 320px;
-          height: 450px;
-          border-radius: 15px;
-          overflow: hidden;
-          transition: all 0.3s ease;
-        }
+        .swiper-slide-active {
+  transform: scale(1.08); /* slightly larger */
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45); /* deeper shadow */
+}
+
         
         /* Center slide styling */
         .swiper-slide-active {
@@ -71,18 +68,23 @@ export default function NewHot() {
           box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
-        /* Side slides styling */
-        .swiper-slide:not(.swiper-slide-active) {
-          opacity: 0.6;
-          filter: blur(1px);
-        }
+        .swiper-slide {
+  width: 320px;
+  height: 450px;
+  border-radius: 30px; /* more round */
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease; /* smoother transitions */
+  background: #111; /* prevents white flash while loading images */
+}
+
         
         .swiper-slide img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px; /* keeps the rounded corners */
+}
+
         
         .swiper-pagination-bullet {
           background: #fff;

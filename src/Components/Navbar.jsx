@@ -9,7 +9,6 @@ import logo from '../Images/logo.png';
 export default function Navbar() {
 
     const Items = [
-        { icon: <IoHome className='text-3xl font-extralight underline-none py-1' />, path: '/' },
         { name: 'New & Hot', path: '/new-and-hot' },
         { name: 'Web Series', path: '/web-series' },
         { name: 'Comedy', path: '/comedy' },
