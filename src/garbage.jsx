@@ -1,209 +1,117 @@
-import React, { useState } from "react";
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
 
-export default function Navbar() {
-  // Object array for links
-  const navLinks = [
-    { name: "Men", path: "/men" },
-    { name: "Women", path: "/women" },
-    { name: "Kids", path: "/kids" },
-    { name: "Home", path: "/" },
-    { name: "Beauty", path: "/beauty" },
-    { name: "Genz", path: "/genz" },
-    { name: "Studio", path: "/studio" },
-  ];
-
-  // useState to track which link is active
-  const [active, setActive] = useState("Home");
-
-  // Arrow function for handling click
-  const handleClick = (name) => {
-    setActive(name);
-  };
+export default function SwiperImages() {
+  const images = [
+   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZeHMXj0wVb5A2xISLwLmvawDXxxNc9B1ZCg&s',
+    'https://m.media-amazon.com/images/M/MV5BNzIzNWQxMjEtZmQ3MS00OTk2LWFlZjktZDUyYWRkM2M3NWVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF0Yj5zO383QQAM8laossRS4qgqk18VlVT2Q&s',
+    'https://resizing.flixster.com/Nr1qu77x4LsGjvXjv8qVPJrJDDI=/fit-in/705x460/v2/https://resizing.flixster.com/qERWhMTSbohQSSOrtVa_jjlz01o=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RiMTJlMzBmLWFmYWMtNGQ4Ni04MWE3LTI3NGRmOWFkYjIxMC5wbmc=',
+    'https://resizing.flixster.com/deQ0ZbG4_O_sJUruxWVTgc5YZIo=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28079875_v_v13_ag.jpg',
+    'https://m.media-amazon.com/images/M/MV5BZmIzMThjNTYtNjkwZi00NmM3LTliNGItZWIxYTUwMGU1YzM0XkEyXkFqcGc@._V1_.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlVPM2ncyLrpfMBkTaHzQ8u8rzpEpBX6zX7A&s',
+    'https://m.media-amazon.com/images/M/MV5BYzRkZWE3YTAtNDdkYS00NjE0LWEzMzktMjVkNzVkYjUwODFhXkEyXkFqcGc@._V1_.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tpu4JamMLzcOdkK3USDaIdA9m7e3mJF-Sw&s',
+  ]
 
   return (
-    <div className="p-4 bg-white arial shadow-2xl">
-      <nav className=" flex justify-between">
-        <ul className="cursor-pointer hover:underline">
-          <img src="https://tinyurl.com/yy8uhxp7" alt="Myntra" width={80} />
-        </ul>
+    <div className="w-full py-12 select-none bg-gradient-to-b from-gray-900 to-black min-h-screen flex flex-col justify-center">
+      {/* Header */}
+      <div className="flex justify-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-100 transition-all duration-500 hover:text-yellow-400 hover:scale-105 text-center px-6 py-4 bg-gradient-to-r from-yellow-600/20 via-red-600/20 to-orange-600/20 rounded-2xl border border-yellow-500/30 shadow-2xl backdrop-blur-sm">
+          November Top Viewed Movies
+        </h2>
+      </div>
 
-          
-
-        <ul className="hidden md:flex justify-evenly items-center gap-8 mr-30 font-bold">
-  {/* Men dropdown first */}
-  <div className="relative group">
-    <li className="cursor-pointer transition-colors flex items-center gap-1 text-gray-800 hover:text-pink-600">
-      <a href="/men">Men</a>
-    </li>
-    <div className="absolute left-0 top-full mt-0 w-52 bg-white shadow-lg rounded-md
-    opacity-0 invisible group-hover:opacity-100 group-hover:visible
-    transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto">
-      <ul className=" absolute right-0 top-full mt-1 w-80 px-8 py-2 cursor-pointer bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] arial font-light
-opacity-0 scale-95 transform origin-top-right transition-all duration-200 ease-out
-pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto ">
-        
-        <div className="text-sm"> 
-          <li className="text-pink-700 font-bold">Top Wear</li> <br />
-          <li className="hover:text-pink-500 hover:scale-110">Topwear</li> <br />
-        <li className="hover:text-pink-500 hover:scale-110">Bottom Wear</li> <br />
-        <li className="hover:text-pink-500 hover:scale-110">Foot Wear</li> <br />
-        <li className="hover:text-pink-500 hover:scale-110">Sports Wear</li><br />
-        <li className="hover:text-pink-500 hover:scale-110">Accessories</li><br />
-        </div>
-
-        <hr />
-
-        <div>
-            <li className="text-pink-700 font-bold">Indian & Festival Wear</li> <br />
-            <li className="hover:text-pink-500 hover:scale-110">Kurtas & Kurtas Set</li> <br />
-            <li className="hover:text-pink-500 hover:scale-110">Shervanies</li> <br />
-            <li className="hover:text-pink-500 hover:scale-110">Nehru Jackets</li> <br />
-            <li className="hover:text-pink-500 hover:scale-110">Dhotis</li> <br />
-            <li></li>
-        </div>
-
-      </ul>
-    </div>
-  </div>    
-
-  {/* Then render the rest of navLinks (excluding "Men") */}
-  {navLinks
-    .filter((link) => link.name !== "Men")
-    .map((link) => (
-      <li
-        key={link.path}
-        onClick={() => handleClick(link.name)}
-        className={`cursor-pointer transition-colors ${
-          active === link.name
-            ? "text-pink-600 font-bold border-b-2 border-pink-600"
-            : "text-gray-800 hover:text-pink-600"
-        }`}
-      >
-        <a href={link.path}>{link.name}</a>
-      </li>
-    ))}
-</ul>
-
-        <footer className="flex justify-evenly items-center gap-5 font-medium ">
-          <ul className="bg-gray-100 flex gap-3 items-center rounded-sm px-3 py-1 h-10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-search text-gray-700"
+      {/* Swiper Container */}
+      <div className="w-full max-w-7xl mx-auto px-4">
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView="auto"
+          loop={true}
+          speed={1000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          coverflowEffect={{
+            rotate: 3,
+            stretch: -30,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: true,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 15 },
+            480: { slidesPerView: 1, spaceBetween: 20 },
+            640: { slidesPerView: 2, spaceBetween: 25 },
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 35 },
+            1280: { slidesPerView: 4, spaceBetween: 40 },
+          }}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="w-full h-full"
+        >
+          {images.map((image, index) => (
+            <SwiperSlide
+              key={index}
+              className="!w-64 !h-80 md:!w-72 md:!h-96 lg:!w-80 lg:!h-[28rem] rounded-2xl overflow-hidden bg-gray-800 shadow-xl"
             >
-              <path d="m21 21-4.34-4.34" />
-              <circle cx="11" cy="11" r="8" />
-            </svg>  
-            <input
-              type="text"
-              placeholder="Search for products,brands and more"
-              className="bg-gray-100 outline-none w-80"
-            />
-          </ul>
+              <div className="relative w-full h-full group cursor-pointer">
+                {/* Movie Image */}
+                <img
+                  src={image}
+                  alt={`Movie ${index + 1}`}
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                  loading="lazy"
+                />
 
-          <ul className="hidden md:flex justify-evenly items-center gap-8">
-            <div className="relative group">
-  <li className="cursor-pointer hover:text-orange-600 z-50 hover:underline flex flex-col items-center text-xs">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-user-icon lucide-user"
-    >
-      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </svg>
-    Profile
-  </li>
+                {/* Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-4">
+                  <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <h3 className="text-lg font-bold text-white mb-2 drop-shadow-lg">
+                      Movie Title {index + 1}
+                    </h3>
+                    <div className="flex items-center space-x-2 text-sm text-gray-200 mb-3">
+                      <span>⭐ 4.5</span>
+                      <span>•</span>
+                      <span>2023</span>
+                      <span>•</span>
+                      <span>2h 15m</span>
+                    </div>
+                    <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95">
+                      Watch Now
+                    </button>
+                  </div>
+                </div>
 
- 
-  <div className="absolute right-0 top-full mt-1 w-80 px-8 py-2 cursor-pointer bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] arial font-light
-opacity-0 scale-95 transform origin-top-right transition-all duration-200 ease-out
-pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-">
-    <ul className="text-gray-700 text-sm mt-4 bg-white">
-      <li>
-        <b className="font-bold">Welcome , </b> <br />
-        To access account and manage orders. <br /><br />
-        <button className="border h-10 w-30 text-pink-600 border-black hover:border-pink-600 cursor-pointer">
-          Login / Sign Up
-        </button>
-        <br /><br />
-        <hr />
-        <ul className="flex flex-col gap-3 cursor-pointer">
-          <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Orders</li>
-          <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Wishlist</li>
-          <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Gift Cards</li>
-          <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Contact Us</li>
-          <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Myntra Insider</li>
-        </ul>
-      </li>
-    </ul>
-    <hr />
-    <ul className="flex flex-col gap-3 cursor-pointer mt-2">
-      <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Myntra Credit</li>
-      <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Coupons</li>
-      <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Save Cards</li>
-      <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Saved VPA</li>
-      <li className="hover:text-pink-500 hover:scale-110 transform transition-all duration-200">Saved Addresses</li>
-    </ul>
-  </div>
-</div>
+                {/* Rating Badge */}
+                <div className="absolute top-3 left-3 bg-black/80 text-white px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
+                  ⭐ 4.5
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-
-            <li className="cursor-pointer hover:text-orange-600 hover:underline flex flex-col items-center text-xs">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-heart-icon lucide-heart"
-              >
-                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-              </svg>
-              Wishlist
-            </li>
-
-            <li className="cursor-pointer hover:text-orange-600 hover:underline flex flex-col items-center text-xs">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-handbag-icon lucide-handbag"
-              >
-                <path d="M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z" />
-                <path d="M8 11V6a4 4 0 0 1 8 0v5" />
-              </svg>
-              Bag
-            </li>
-          </ul>
-        </footer>
-
-      </nav>
+      {/* Navigation Instructions */}
+      <div className="text-center mt-8">
+        <p className="text-gray-400 text-sm animate-pulse">
+          ✨ Auto-sliding • Hover to pause • Click to interact
+        </p>
+      </div>
     </div>
-  );
+  )
 }

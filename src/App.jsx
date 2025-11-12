@@ -7,12 +7,13 @@ import Bollywood from './Tabs/Bollywood.jsx';
 import Comedy from './Tabs/Comedy.jsx';
 import Hollywood from './Tabs/Hollywood.jsx';
 import Horror from './Tabs/Horror.jsx';
-import NewHot from './Tabs/New&Hot.jsx';
+import NewHot from '../src/Tabs/New&Hot.jsx';
 import Webseries from './Tabs/Webseries.jsx';
+import Profile from './Tabs/profile.jsx';
 
 export default function App() {
   return (
-    <div className=' h-full bg-linear-150 from-gray-700 to-black'>
+    <div className=' bg-gray-900 py-5'>
 
       <BrowserRouter>
       <div className='flex justify-center w-full items-center '>
@@ -25,6 +26,8 @@ export default function App() {
           <Route path='/web-series' element={<Webseries />} />
           <Route path='/comedy' element={<Comedy />} />
           <Route path='/horror' element={<Horror />} />
+          <Route path='/profile' element={<Profile />} />
+
         </Routes>
       </BrowserRouter>
 

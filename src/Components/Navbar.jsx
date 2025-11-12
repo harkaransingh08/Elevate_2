@@ -25,7 +25,6 @@ export default function Navbar() {
             ]
         },
 
-
         {
             name: 'Bollywood', path: '/bollywood',
             children: [
@@ -35,6 +34,7 @@ export default function Navbar() {
                 { name: "Thriller", path: "/hollywood/thriller" },
             ]
         },
+        
     ];
     const Icons = [
         { icon: <CiSearch className='text-2xl' />, path: '/search' },
